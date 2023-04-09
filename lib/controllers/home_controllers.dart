@@ -1,9 +1,11 @@
 import 'dart:developer';
+import 'dart:math';
 
 import 'package:get/get.dart';
 import 'package:plusone_counter/model/counter_model.dart';
 import 'package:plusone_counter/model/counter_record_model.dart';
 import 'package:plusone_counter/services/hive_service/hive_service.dart';
+import 'package:plusone_counter/utils/helper_classes/helper_function.dart';
 import 'package:plusone_counter/utils/helper_classes/response.dart';
 
 class HomeController extends GetxController {
@@ -57,7 +59,8 @@ class HomeController extends GetxController {
 
   Future<ResponseType> addRecordToCounter(CounterRecordModel recordItem) async {
     isLoading.value = true;
-    var response = await _hiveService.createCounterServiceHelper
+    late ResponseType response;
+    response = await _hiveService.createCounterServiceHelper
         .addRecordToCounter(recordItem);
 
     _countersModels.refresh();
@@ -71,6 +74,7 @@ class HomeController extends GetxController {
         .counterRecords
         .toList();
     records.sort((a, b) => b.dateTime.compareTo(a.dateTime));
+    records = HelperFunction.fillStreakValue(records);
     return records;
   }
 

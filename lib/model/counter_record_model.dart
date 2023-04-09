@@ -15,12 +15,14 @@ class CounterRecordModel {
   final String? description;
   @HiveField(4)
   final int countValue;
+  int streakv;
   CounterRecordModel({
     required this.id,
     required this.counterId,
     required this.dateTime,
     required this.countValue,
     this.description,
+    this.streakv = 0,
   });
 
   @override

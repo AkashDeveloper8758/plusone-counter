@@ -39,7 +39,7 @@ class GenerateRoute {
         var counterArgs = settings.arguments as CounterRecordArgs;
         return MaterialPageRoute(
           builder: (BuildContext context) => CounterScreen(
-            counterModelId: counterArgs.counterId,
+            counterModel: counterArgs.counterModel,
             counterRecord: counterArgs.counterRecordModel,
           ),
         );
@@ -60,10 +60,10 @@ class GenerateRoute {
 }
 
 class CounterRecordArgs {
-  String counterId;
+  CounterModel counterModel;
   CounterRecordModel? counterRecordModel;
   CounterRecordArgs({
-    required this.counterId,
+    required this.counterModel,
     this.counterRecordModel,
   });
 }

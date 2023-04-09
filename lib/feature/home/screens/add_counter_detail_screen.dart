@@ -86,7 +86,7 @@ class _CreateCounterScreenState extends State<CreateCounterScreen> {
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            'Daily Goal',
+                            'Daily Goal (optional)',
                             style: Theme.of(context).textTheme.titleMedium,
                           ),
                         ),
@@ -147,6 +147,11 @@ class _CreateCounterScreenState extends State<CreateCounterScreen> {
                       title: "Save counter",
                       onPressed: () async {
                         if (_formKey.currentState?.validate() ?? false) {
+                          if (dailyGoal > 10000) {
+                            Fluttertoast.showToast(
+                                msg: 'daily goal can\'t exceeds 5000 limits.');
+                            return;
+                          }
                           var counterId = Uuid().v1();
                           CounterModel counterModel = CounterModel(
                               id: _isUpdate

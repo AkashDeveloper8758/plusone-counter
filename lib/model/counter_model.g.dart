@@ -20,7 +20,7 @@ class CounterModelAdapter extends TypeAdapter<CounterModel> {
       id: fields[1] as String,
       createDate: fields[2] as DateTime,
       counterTitle: fields[0] as String,
-      counterRecords: ((fields[3] ?? []) as List).cast<CounterRecordModel>(),
+      counterRecords: (fields[3] as List).cast<CounterRecordModel>(),
       dailyGoal: fields[4] as int?,
     );
   }

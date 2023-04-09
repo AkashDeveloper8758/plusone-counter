@@ -33,4 +33,17 @@ class BigList {
     145,
     57
   ];
+  static List<String> motivationalImageList = [
+    'https://cdn.graciousquotes.com/wp-content/uploads/2020/07/I-accumulated-small-but-consistent-habits-that-ultimately-led-to-results-that-were-unimaginable-when-I-started.-James-Clear.jpg',
+    'https://3.bp.blogspot.com/-S3jDrO5HdgU/W0rwDHEl-qI/AAAAAAAARmM/P4c4iFVpQ-kb9OwsG-tknEWXanPejT11gCLcBGAs/s1600/We%2Bare%2Bwhat%2Bwe%2Brepeatedly%2Bdo.%2BExcellence%252C%2Bthen%252C%2Bis%2Bnot%2Ban%2Bact%252C%2Bbut%2Ba%2Bhabit.%2BWill%2BDurant.png',
+    'https://i.pinimg.com/564x/a1/70/58/a17058438e9da28609e435e34cb5de35.jpg',
+    'https://i.pinimg.com/564x/b7/1f/0f/b71f0f2bfca747945887490356fc68d8.jpg',
+    'https://i.pinimg.com/564x/86/fd/98/86fd983f50d5695e94a3cc842c267ac0.jpg',
+    'https://i.pinimg.com/564x/1f/58/5a/1f585a64b616beb64156d8f4029b3397.jpg',
+    'https://i.pinimg.com/564x/be/eb/d8/beebd8a2b631b759f238c2bd784cc178.jpg',
+    'https://i.pinimg.com/564x/ff/0a/ad/ff0aad452cdd60002957c74e792b65dc.jpg',
+    'https://i.pinimg.com/564x/ea/b0/ec/eab0ecc25f1b4ba07ea6adc53a835f47.jpg',
+    'https://i.pinimg.com/564x/cb/45/8f/cb458fb5b7064fb496fba45ac5d75f99.jpg',
+    'https://i.pinimg.com/564x/d3/49/e5/d349e55dd1bdd53eef1f0e6ae8b599bc.jpg'
+  ];
 }
